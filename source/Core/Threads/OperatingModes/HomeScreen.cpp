@@ -48,11 +48,11 @@ void handleButtons(bool *buttonLockout) {
     // Show the version information
     showDebugMenu();
     break;
-  case BUTTON_F_SHORT:
+  case BUTTON_F_LONG:
     gui_solderingTempAdjust();
     saveSettings();
     break;
-  case BUTTON_F_LONG:
+  case BUTTON_F_SHORT:
     if (!isTipDisconnected()) {
       gui_solderingMode(0); // enter soldering mode
       *buttonLockout = true;
